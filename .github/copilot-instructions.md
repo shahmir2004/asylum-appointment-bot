@@ -69,6 +69,30 @@ notification-service test --channels=email,telegram
 - Database: Use SQLAlchemy ORM with explicit schema migrations
 - API: REST-style with JSON request/response, OpenAPI documentation
 
+## Git Workflow & Commit Requirements
+- **Systematic Task Commits**: Each completed task (T001, T002, etc.) MUST have its own dedicated commit
+- **Conventional Commits**: Use format `feat(TXXX): brief description` for task implementations
+- **Commit Sequence**: Commit tasks in logical dependency order (T008→T009→T010→T011)
+- **Detailed Messages**: Include comprehensive commit messages with:
+  - Task identifier in commit title
+  - Bullet points describing what was implemented
+  - Dependencies and relationships mentioned
+  - Breaking changes or important notes
+- **Clean History**: Each task commit should be atomic and represent complete functionality
+- **Push Strategy**: Push completed task groups together (e.g., T008-T011 database models)
+- **Branch Management**: Work on feature branches, merge to main when task groups complete
+
+### Commit Message Template:
+```
+feat(TXXX): brief description of what was implemented
+
+- First major feature/change implemented
+- Second major feature/change implemented  
+- Dependencies or relationships established
+- Security considerations or performance improvements
+- Any breaking changes or migration requirements
+```
+
 ## Architecture Principles
 - Library-first: Every feature as standalone library with CLI
 - Microservices: Separate services for bot, proxy, scheduler, notifications
@@ -79,6 +103,19 @@ notification-service test --channels=email,telegram
 
 ## Recent Changes
 - 001-a-bot-that: Added asylum appointment booking bot with Python + Playwright + Docker architecture
+- T001-T003: Backend foundation with FastAPI, configuration, and database setup
+- T004-T007: Authentication contract tests following TDD methodology  
+- T008-T011: Complete database models (WebUser, WebSession, ActivityLog, BotStatus)
+
+## Git Commit History (Latest Tasks)
+```
+51d4cc9 feat(models): finalize database models package with complete exports
+ac8ed74 feat(T011): implement BotStatus model for real-time monitoring
+eb673b5 feat(T010): implement ActivityLog model for comprehensive audit trail
+44211da feat(T009): implement WebSession model for authentication tracking
+af94259 feat(T008): implement WebUser model with role-based access control
+e593485 docs: add T004-T007 completion summary with TDD analysis
+```
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->
