@@ -92,6 +92,9 @@ The application creates default accounts on first startup:
 ### Running Tests
 
 ```bash
+# Quick test runner (recommended for T004-T007)
+python run_tests.py
+
 # Run all tests
 python -m pytest
 
@@ -100,9 +103,29 @@ python -m pytest tests/contract/
 python -m pytest tests/integration/
 python -m pytest tests/unit/
 
+# Run specific contract tests
+python -m pytest tests/contract/test_auth_login.py -v
+python -m pytest tests/contract/test_auth_refresh.py -v
+python -m pytest tests/contract/test_auth_me.py -v
+python -m pytest tests/contract/test_auth_logout.py -v
+
 # Run with coverage
 python -m pytest --cov=src
+
+# Run tests with detailed output
+python -m pytest -v --tb=short
 ```
+
+### Test Status (TDD Approach)
+
+#### ✅ Contract Tests (T004-T007) - MUST FAIL INITIALLY
+- **T004**: `test_auth_login.py` - POST /api/auth/login contract
+- **T005**: `test_auth_refresh.py` - POST /api/auth/refresh contract  
+- **T006**: `test_auth_me.py` - GET /api/auth/me contract
+- **T007**: `test_auth_logout.py` - POST /api/auth/logout contract
+
+**Expected Result**: All tests should FAIL (endpoints not implemented yet)
+**Next Step**: Implement authentication system to make tests pass
 
 ### Code Quality
 
