@@ -1,0 +1,55 @@
+# FastAPI Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database and ORM
+sqlalchemy==2.0.23
+alembic==1.12.1
+
+# Authentication and Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# WebSocket Support
+websockets==12.0
+
+# Environment and Configuration
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# HTTP Client for testing and external APIs
+httpx==0.25.2
+requests==2.31.0
+
+# CORS Middleware
+python-cors==0.2.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+httpx==0.25.2
+
+# Development
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Logging and Monitoring
+structlog==23.2.0
+rich==13.7.0
+
+# Date and Time
+python-dateutil==2.8.2
+
+# JSON handling
+orjson==3.9.10
+
+# Process management for bot integration
+psutil==5.9.6
+
+# File system monitoring for logs
+watchdog==3.0.0

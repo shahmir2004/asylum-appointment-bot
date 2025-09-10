@@ -92,3 +92,13 @@ temp/
 tmp/
 temp/
 .tmp/
+
+# Backend specific
+backend/.env
+backend/logs/
+backend/uploads/
+backend/asylum_bot_web.db
+backend/venv/
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
