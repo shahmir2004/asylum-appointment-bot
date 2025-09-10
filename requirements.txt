@@ -1,0 +1,27 @@
+# Asylum Appointment Booking Bot - MVP Requirements
+
+# Core dependencies for MVP
+playwright>=1.39.0              # Web automation and scraping
+schedule>=1.2.0                 # Simple job scheduling for 2-minute intervals
+python-dotenv>=1.0.0           # Environment variable management
+
+# Built-in modules used (no pip install needed):
+# - sqlite3 (database)
+# - smtplib (email notifications)
+# - email.mime.* (email formatting)
+# - logging (application logging)
+# - time, datetime (timing and scheduling)
+# - os, sys (system utilities)
+# - json (data handling)
+
+# Development dependencies
+pytest>=7.4.0                  # Testing framework
+pytest-asyncio>=0.21.0         # Async testing support
+
+# Optional for enhanced development
+black>=23.0.0                  # Code formatting
+flake8>=6.0.0                  # Code linting
+
+# Installation instructions:
+# 1. pip install -r requirements.txt
+# 2. playwright install chromium  # Install browser for Playwright
